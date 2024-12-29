@@ -1,19 +1,3 @@
-<div id="header" align="center">
-  <img src="https://media.giphy.com/media/6zZS7QsNsLougxLuPy/giphy.gif" width="100"/>
-  <div id="badges" align="center">
-  <a href="https://bento.me/landauleo">
-  <img src="https://img.shields.io/badge/bento-white?logo=bento" alt="Bento Badge"/>
-  </a>
-  <a href="https://medium.com/@anyamytea">
-  <img src="https://img.shields.io/badge/medium-black?logo=medium" alt="Medium Badge"/>
-  </a>
-  </div>
-<!--   <h1>
-    Hi there!
-    <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYmM2YzJkZTYwY2RjYTU1MzRlNTA3MzhmMGU5ZjY3Y2VmZjI2NGY5MCZlcD12MV91c2VyX2Zhdm9yaXRlcyZjdD1n/3ov9jDXQIo4FP1DRHa/giphy.gif" width="40px">
-  </h1> -->
-</div>
-
 <h1>Hi there! <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYmM2YzJkZTYwY2RjYTU1MzRlNTA3MzhmMGU5ZjY3Y2VmZjI2NGY5MCZlcD12MV91c2VyX2Zhdm9yaXRlcyZjdD1n/3ov9jDXQIo4FP1DRHa/giphy.gif" width="40px">
 </h1>
 I'm a developer passionate about writing clean and efficient code. My primary focus is on Java, but I also take on full-stack tasks using TypeScript, and React from time to time.  
@@ -41,3 +25,11 @@ I'm a developer passionate about writing clean and efficient code. My primary fo
 
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=landauleo&layout=compact&theme=vision-friendly-dark)](https://github.com/anuraghazra/github-readme-stats)
 
+<div id="footer">
+  <img src="https://media.giphy.com/media/6zZS7QsNsLougxLuPy/giphy.gif" width="100"/>
+  <div id="badges">
+  <a href="https://bento.me/landauleo">
+  <img src="https://img.shields.io/badge/bento-black?logo=bento" alt="Bento Badge"/>
+  </a>
+  </div>
+</div>
