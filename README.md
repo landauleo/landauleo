@@ -21,6 +21,7 @@ I'm a developer passionate about writing clean and efficient code. My primary fo
   <img src="https://github.com/devicons/devicon/blob/master/icons/kubernetes/kubernetes-original-wordmark.svg" title="Kubernetes"  alt="Kubernetes" width="40" height="40"/>&nbsp;
 </div>
 
+### 📊 Stats :
 [![GitHub Streak](http://github-readme-streak-stats.herokuapp.com?user=landauleo&theme=dark&background=000000)](https://git.io/streak-stats)
 
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=landauleo&layout=compact&theme=vision-friendly-dark)](https://github.com/anuraghazra/github-readme-stats)
@@ -29,7 +30,7 @@ I'm a developer passionate about writing clean and efficient code. My primary fo
   <img src="https://media.giphy.com/media/6zZS7QsNsLougxLuPy/giphy.gif" width="100"/>
   <div id="badges">
   <a href="https://bento.me/landauleo">
-  <img src="https://img.shields.io/badge/bento-black?logo=bento" alt="Bento Badge"/>
+  <img src="https://img.shields.io/badge/my_bento-black?logo=bento" alt="Bento Badge"/>
   </a>
   </div>
 </div>
