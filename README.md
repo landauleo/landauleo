@@ -22,15 +22,13 @@ I'm a developer passionate about writing clean and efficient code. My primary fo
 </div>
 
 ### 📊 Stats :
-[![GitHub Streak](http://github-readme-streak-stats.herokuapp.com?user=landauleo&theme=dark&background=000000)](https://git.io/streak-stats)
-
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=landauleo&layout=compact&theme=vision-friendly-dark)](https://github.com/anuraghazra/github-readme-stats)
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=landauleo&layout=compact)](https://github.com/anuraghazra/github-readme-stats)
 
 <div id="footer">
   <img src="https://media.giphy.com/media/6zZS7QsNsLougxLuPy/giphy.gif" width="100"/>
   <div id="badges">
   <a href="https://bento.me/landauleo">
-  <img src="https://img.shields.io/badge/my_bento-black?logo=bento" alt="Bento Badge"/>
+  <img src="https://img.shields.io/badge/my_bento-white?logo=bento" alt="Bento Badge"/>
   </a>
   </div>
 </div>
