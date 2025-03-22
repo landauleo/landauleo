@@ -1,10 +1,7 @@
 <h1>Hi, alien! <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYmM2YzJkZTYwY2RjYTU1MzRlNTA3MzhmMGU5ZjY3Y2VmZjI2NGY5MCZlcD12MV91c2VyX2Zhdm9yaXRlcyZjdD1n/3ov9jDXQIo4FP1DRHa/giphy.gif" width="40px">
 </h1>
 
-### 💻 What I Do:
-- 🚀 Build robust backend systems using Java and related technologies.  
-- 🌐 Occasionally dive into full-stack development tasks.  
-- 🎯 Work on challenging and exciting projects that help me grow as a developer.  
+I'm a software engineer with impostor syndrome. I do backend but pretend to be full-stack!
 
 <div>
   <img src="https://github.com/devicons/devicon/blob/master/icons/java/java-original-wordmark.svg" title="Java" alt="Java" width="40" height="40"/>&nbsp;
