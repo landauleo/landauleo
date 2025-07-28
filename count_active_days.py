@@ -1,36 +1,61 @@
-from datetime import datetime
 import requests
+import os
 import re
+from datetime import datetime
 
 USERNAME = "landauleo"
 YEAR = datetime.now().year
-URL = f"https://api.github.com/users/{USERNAME}/events/public"
+TOKEN = os.environ.get("GH_TOKEN")
 
-def get_active_days(username):
-    page = 1
-    active_days = set()
+def get_active_days_via_graphql(username):
+    url = "https://api.github.com/graphql"
+    headers = {
+        "Authorization": f"Bearer {TOKEN}",
+        "Content-Type": "application/json"
+    }
 
-    while True:
-        resp = requests.get(f"{URL}?page={page}", headers={"Accept": "application/vnd.github.v3+json"})
-        data = resp.json()
+    query = """
+    query($username: String!, $from: DateTime!, $to: DateTime!) {
+      user(login: $username) {
+        contributionsCollection(from: $from, to: $to) {
+          contributionCalendar {
+            weeks {
+              contributionDays {
+                date
+                contributionCount
+              }
+            }
+          }
+        }
+      }
+    }
+    """
 
-        if not data:
-            break
+    from_date = f"{YEAR}-01-01T00:00:00Z"
+    to_date = f"{YEAR}-12-31T23:59:59Z"
 
-        for event in data:
-            date = event["created_at"]
-            year = datetime.strptime(date, "%Y-%m-%dT%H:%M:%SZ").year
-            if year == YEAR:
-                active_days.add(date[:10])
-            elif year < YEAR:
-                return len(active_days)
+    variables = {
+        "username": username,
+        "from": from_date,
+        "to": to_date
+    }
 
-        page += 1
+    response = requests.post(url, json={"query": query, "variables": variables}, headers=headers)
+    data = response.json()
 
-    return len(active_days)
+    if "errors" in data:
+        raise Exception(f"GraphQL error: {data['errors']}")
+
+    weeks = data['data']['user']['contributionsCollection']['contributionCalendar']['weeks']
+    active_days = sum(
+        1 for week in weeks
+        for day in week['contributionDays']
+        if day['contributionCount'] > 0
+    )
+    return active_days
 
 def update_readme():
-    active_days = get_active_days(USERNAME)
+    active_days = get_active_days_via_graphql(USERNAME)
 
     with open("README.md", "r", encoding="utf-8") as f:
         content = f.read()
