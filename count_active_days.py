@@ -5,18 +5,13 @@ from datetime import datetime
 
 USERNAME = "landauleo"
 YEAR = datetime.now().year
-TOKEN = os.environ.get("GH_TOKEN")
+GITHUB_API_URL = "https://api.github.com/graphql"
+TOKEN = os.getenv("GH_TOKEN")
 
 def get_active_days_via_graphql(username):
-    url = "https://api.github.com/graphql"
-    headers = {
-        "Authorization": f"Bearer {TOKEN}",
-        "Content-Type": "application/json"
-    }
-
     query = """
-    query($username: String!, $from: DateTime!, $to: DateTime!) {
-      user(login: $username) {
+    query ($login: String!, $from: DateTime!, $to: DateTime!) {
+      user(login: $login) {
         contributionsCollection(from: $from, to: $to) {
           contributionCalendar {
             weeks {
@@ -34,17 +29,21 @@ def get_active_days_via_graphql(username):
     from_date = f"{YEAR}-01-01T00:00:00Z"
     to_date = f"{YEAR}-12-31T23:59:59Z"
 
-    variables = {
-        "username": username,
-        "from": from_date,
-        "to": to_date
+    headers = {
+        "Authorization": f"Bearer {TOKEN}",
+        "Content-Type": "application/json"
     }
 
-    response = requests.post(url, json={"query": query, "variables": variables}, headers=headers)
+    response = requests.post(
+        GITHUB_API_URL,
+        json={"query": query, "variables": {"login": username, "from": from_date, "to": to_date}},
+        headers=headers
+    )
+
     data = response.json()
 
-    if "errors" in data:
-        raise Exception(f"GraphQL error: {data['errors']}")
+    if "data" not in data:
+        raise ValueError(f"GraphQL error: {data.get('errors')}")
 
     weeks = data['data']['user']['contributionsCollection']['contributionCalendar']['weeks']
     active_days = sum(

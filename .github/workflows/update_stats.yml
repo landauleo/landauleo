@@ -9,25 +9,30 @@ permissions:
   contents: write  # разрешаем боту коммитить и пушить
 
 jobs:
-  build:
+  update:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.x'
+
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
+
       - name: Run script
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: python count_active_days.py
+
       - name: Commit changes
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git remote set-url origin https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/${{ github.repository }}
           git add README.md
           git commit -m "Update active days" || echo "No changes"
           git push
