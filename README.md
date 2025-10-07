@@ -3,7 +3,7 @@
 
 I'm a software engineer with impostor syndrome. I do backend but pretend to be full-stack!
 
-Active days in 2025: **32**
+Active days in 2025: **33**
 
 <div>
   <img src="https://github.com/devicons/devicon/blob/master/icons/java/java-original-wordmark.svg" title="Java" alt="Java" width="40" height="40"/>&nbsp;
