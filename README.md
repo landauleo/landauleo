@@ -15,3 +15,11 @@ I'm a software engineer with impostor syndrome. I do backend but pretend to be f
   <img src="https://github.com/devicons/devicon/blob/master/icons/docker/docker-original-wordmark.svg" title="Docker"  alt="Docker" width="40" height="40"/>&nbsp;
   <img src="https://github.com/devicons/devicon/blob/master/icons/kubernetes/kubernetes-original-wordmark.svg" title="Kubernetes"  alt="Kubernetes" width="40" height="40"/>&nbsp;
 </div>
+<div id="footer">
+  <img src="https://media.giphy.com/media/6zZS7QsNsLougxLuPy/giphy.gif" width="100"/>
+  <div id="badges">
+  <a href="https://medium.com/@anyamytea">
+  <img src="https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium" alt="Medium Badge"/>
+  </a>
+  </div>
+</div>
