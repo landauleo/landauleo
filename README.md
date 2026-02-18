@@ -3,8 +3,6 @@
 
 I'm a software engineer with impostor syndrome. I do backend but pretend to be full-stack!
 
-Active days in 2026: **39**
-
 <div>
   <img src="https://github.com/devicons/devicon/blob/master/icons/java/java-original-wordmark.svg" title="Java" alt="Java" width="40" height="40"/>&nbsp;
   <img src="https://github.com/devicons/devicon/blob/master/icons/spring/spring-original-wordmark.svg" title="Spring" alt="Spring" width="40" height="40"/>&nbsp;
@@ -17,8 +15,6 @@ Active days in 2026: **39**
   <img src="https://github.com/devicons/devicon/blob/master/icons/docker/docker-original-wordmark.svg" title="Docker"  alt="Docker" width="40" height="40"/>&nbsp;
   <img src="https://github.com/devicons/devicon/blob/master/icons/kubernetes/kubernetes-original-wordmark.svg" title="Kubernetes"  alt="Kubernetes" width="40" height="40"/>&nbsp;
 </div>
-
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=landauleo&layout=compact)](https://github.com/anuraghazra/github-readme-stats)
 
 <div id="footer">
   <img src="https://media.giphy.com/media/6zZS7QsNsLougxLuPy/giphy.gif" width="100"/>
